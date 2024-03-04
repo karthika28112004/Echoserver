@@ -21,6 +21,7 @@ Testing the server and client
 
 ## PROGRAM:
 ## Server code
+```
 import socket
 
 HOST = "127.0.0.1"  # Standard loopback interface address (localhost)
@@ -53,8 +54,10 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             except Exception as e:
                 print(f"Error receiving/sending data: {e}")
                 exit()
+```
 
-##Client code
+##  Client code
+```
 import socket
 HOST = "127.0.0.1"  # The server's hostname or IP address
 PORT = 65432  # The port used by the server
@@ -64,7 +67,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     data = s.recv(1024)
 
 print(f"Received {data!r}")
-
+```
 ## OUTPUT:
 ##Server side
 
